@@ -33,14 +33,15 @@ public class Monitor extends Thread{
 	    * @param id
 	    */
 	   public void enterStudent(int id) {
-		  while(true) {
+//		  while(true) {
 		      if(monitor.availablePermits() > 0){
-		    	  try{monitor.acquire();
-			      	System.out.println("Estudiante " + id + " está esperando turno");
-			        ThreadSleep.nap();
+		    	  try{
+		    		  monitor.acquire();
+			      	  System.out.println("Estudiante " + id + " está esperando turno");
+			          ThreadSleep.nap();
 		    	  } 
 		    	  catch(InterruptedException e) { 
-		        	e.printStackTrace();
+		        	  e.printStackTrace();
 		    	  }
 		   
 				  try {
@@ -60,7 +61,7 @@ public class Monitor extends Thread{
 				  System.out.println("Estudiante " + id + " se fue de la oficina");
 				  ThreadSleep.nap();
 			  }  
-		  }
+//		  }
 	
 	   }
 	

@@ -31,6 +31,8 @@ public class Student extends Thread{
 	  */
 	 @Override
 	 public void run() {
-	     monitor.enterStudent(id);
+		 while(true) {
+			 monitor.enterStudent(id);
+	 	 }
 	 }
 }

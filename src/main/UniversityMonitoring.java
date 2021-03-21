@@ -17,7 +17,7 @@ public class UniversityMonitoring {
 	/**
 	 * Número de estudiantes 
 	 */
-	public static final int NUM_OF_STUDENTS = 10;
+	public static final int NUM_OF_STUDENTS = 6;
 
 	/**
 	 * Metodo principal para la ejcución del programa

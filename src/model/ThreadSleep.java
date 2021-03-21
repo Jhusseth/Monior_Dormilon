@@ -1,6 +1,5 @@
 package model;
 
-import java.util.Random;
 
 /**
  * 
@@ -12,7 +11,7 @@ public class ThreadSleep {
 	/*
 	 * indice para el generador de numeros aleatorios
 	 */
-	private static final int NAP_TIME = 12345;
+	private static final int NAP_TIME = 5;
 
 	/**
 	 * da la aletoriedad para la espera en los hilos
@@ -26,9 +25,11 @@ public class ThreadSleep {
 	 * @param duration
 	 */
 	private static void nap(int duration) {
-		Random genRandom = new Random(duration);
+		int sleeptime = (int) (duration * Math.random() );
+//		Random genRandom = new Random(duration);
 	    try {
-	    	Thread.sleep(Math.abs(genRandom.nextInt()) % 1000); 
+	    	Thread.sleep(sleeptime * 1000);
+//	    	Thread.sleep(Math.abs(genRandom.nextInt()) % 1000); 
 	    } catch (InterruptedException ie) {
 	    	ie.printStackTrace();
 	    }
